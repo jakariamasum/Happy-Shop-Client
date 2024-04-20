@@ -48,7 +48,7 @@ To run the client side of Happy Shop locally on your machine, follow these steps
 2. Navigate to the client directory:
 
    ```bash
-   cd happy-shop/client
+   cd Happy-Shop/Client
    ```
 
 3. Install dependencies:
@@ -78,7 +78,7 @@ To run the server side of Happy Shop locally on your machine, follow these steps
 2. Navigate to the server directory:
 
    ```bash
-   cd happy-shop/server
+   cd Happy-Shop/server
    ```
 
 3. Install dependencies:
