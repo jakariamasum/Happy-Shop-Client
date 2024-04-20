@@ -3,6 +3,12 @@
 
 Welcome to Happy Shop - your one-stop destination for all your shopping needs! Whether you're looking for clothing, electronics, beauty products, or more, Happy Shop has got you covered. This README file provides an overview of the project and instructions for setting up and running the website.
 
+Admin login credentials: 
+```plaintext
+email: admin@test.com
+password: Admin123
+```
+
 To view the server-side code for the Happy Shop project, you can visit the GitHub repository at the following link:
 
 [Happy Shop Server Repository](https://github.com/jakariamasum/Happy-Shop-server)
