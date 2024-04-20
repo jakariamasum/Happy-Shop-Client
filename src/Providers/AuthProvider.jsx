@@ -86,11 +86,11 @@ const AuthProvider = ({ children }) => {
       };
       console.log(newUser);
       if (loogedUser?.email) {
-        fetch(`http://localhost:5173/eachUser/${loogedUser?.email}`)
+        fetch(`http://localhost:8000/eachUser/${loogedUser?.email}`)
           .then((res) => res.json())
           .then((data) => {
             if (data.notFound) {
-              fetch("http://localhost:5173/users", {
+              fetch("http://localhost:8000/users", {
                 method: "POST",
                 headers: {
                   "content-type": "application/json",
@@ -104,12 +104,12 @@ const AuthProvider = ({ children }) => {
       } else if (loogedUser?.phoneNumber) {
         console.log("User has Phone Number");
         fetch(
-          `http://localhost:5173/each-user-by-number/${loogedUser?.phoneNumber}`
+          `http://localhost:8000/each-user-by-number/${loogedUser?.phoneNumber}`
         )
           .then((res) => res.json())
           .then((data) => {
             if (data?.notFound) {
-              fetch("http://localhost:5173/users", {
+              fetch("http://localhost:8000/users", {
                 method: "POST",
                 headers: {
                   "content-type": "application/json",

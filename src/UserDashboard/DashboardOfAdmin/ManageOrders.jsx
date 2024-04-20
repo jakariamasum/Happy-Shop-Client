@@ -18,6 +18,7 @@ import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";
 import useOrders from "../../Hooks/useOrders";
 import { Link } from "react-router-dom";
 import Loader from "../../Components/Loader/Loader";
+import Swal from "sweetalert2";
 
 const ManageOrders = () => {
   const [orders, isOrdersLoading, refetch] = useOrders({
@@ -30,26 +31,51 @@ const ManageOrders = () => {
 
   const handleDecline = (id) => {
     axios
-      .patch(`http://localhost:5173/order/${id}?status=${"declined"}`)
+      .patch(`http://localhost:8000/order/${id}?status=${"declined"}`)
       .then((res) => {
         console.log(res.data);
         refetch();
+        Swal.fire({
+          icon: 'danger',
+          title: 'Order Deleted',
+          text: 'The order has been successfully deleted.',
+          confirmButtonText: 'OK'
+        });
       })
       .catch(function (error) {
         console.log(error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong! Please try again later.',
+          confirmButtonText: 'OK'
+        });
       });
   };
 
   const handleAccept = (id) => {
-    axios
-      .patch(`http://localhost:5173/order/${id}?status=${"accepted"}`)
-      .then((res) => {
-        console.log(res.data);
-        refetch();
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    axios.patch(`http://localhost:8000/order/${id}?status=accepted`)
+  .then((res) => {
+    console.log(res.data);
+    refetch();
+    // Display success message with SweetAlert2
+    Swal.fire({
+      icon: 'success',
+      title: 'Order Accepted',
+      text: 'The order has been successfully accepted.',
+      confirmButtonText: 'OK'
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+    // Display error message with SweetAlert2 if request fails
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong! Please try again later.',
+      confirmButtonText: 'OK'
+    });
+  });
   };
   return (
     <div className="overflow-x-auto w-full md:w-[90%]">

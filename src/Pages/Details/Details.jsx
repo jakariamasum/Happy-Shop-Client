@@ -58,14 +58,16 @@ const Details = () => {
   const apiObj = useParams();
   const [axiosSecure] = useAxiosSecure();
   const { apiPath, id } = apiObj;
+  // console.log(id)
   const { user } = useContext(AuthContext);
   const [userData, isUserDataLoading] = useUser();
-  console.log(user);
-  console.log(apiPath, id);
+  // console.log(user);
+  // console.log(apiPath, id);
   const { data: product, isLoading: isProductLoading } = useQuery({
     queryKey: [id],
     queryFn: async () => {
-      const res = await axiosSecure.get(`/${apiPath}/${id}`);
+      const res = await axiosSecure.get(`/products/${id}`);
+      console.log(res)
       return res.data;
     },
   });
@@ -160,7 +162,7 @@ const Details = () => {
       qunatity: 1,
     };
     axios
-      .post("http://localhost:5173/cart", cartProduct)
+      .post("http://localhost:8000/cart", cartProduct)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
@@ -348,7 +350,7 @@ const Details = () => {
               Add to cart
             </button>
             <div className="rotate-45 bg-blue-500 basis-[40%] h-96"></div>
-            <h2 className="absolute top-3 right-8">I am Hasnat</h2>
+            <h2 className="absolute top-3 right-8">I am Admin</h2>
           </div>
           <img src={banner} alt="" />
           <div className="bg-white mx-3 md:mx-0 my-5 p-4 py-5 md:p-6 mb-5 gap-10 rounded-sm md:shadow-lg border-2 border-[#e9e9e9] md:border-none">

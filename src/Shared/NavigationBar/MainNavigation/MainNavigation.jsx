@@ -41,7 +41,7 @@ const MainNavigation = () => {
   // const [isBeautyOpen, setIsBeautyOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   return (
     <div>
@@ -60,11 +60,10 @@ const MainNavigation = () => {
               <Typography as="div" variant="paragraph" className="font-medium ">
                 <ListItem
                   ripple={false}
-                  className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                    location.pathname === "/"
+                  className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname === "/"
                       ? "!text-blue-500"
                       : "text-gray-800"
-                  }`}
+                    }`}
                   selected={isHomeOpen || isMobileMenuOpen}
                   onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                 >
@@ -91,24 +90,21 @@ const MainNavigation = () => {
                 >
                   <ListItem
                     ripple={false}
-                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/electronics")
+                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/electronics")
                         ? "text-blue-500"
                         : "text-gray-700"
-                    }`}
+                      }`}
                     selected={isHomeOpen || isMobileMenuOpen}
                     onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                   >
                     Electronics
                     <FaAngleDown
-                      className={`hidden h-3 w-3 transition-transform lg:block ${
-                        isHomeOpen ? "rotate-180" : ""
-                      }`}
+                      className={`hidden h-3 w-3 transition-transform lg:block ${isHomeOpen ? "rotate-180" : ""
+                        }`}
                     ></FaAngleDown>
                     <FaAngleDown
-                      className={`block h-3 w-3 transition-transform lg:hidden ${
-                        isMobileMenuOpen ? "rotate-180" : ""
-                      }`}
+                      className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                        }`}
                     ></FaAngleDown>
                   </ListItem>
                 </Typography>
@@ -170,24 +166,21 @@ const MainNavigation = () => {
                 <Typography as="div" variant="pararaph" className="font-medium">
                   <ListItem
                     ripple={false}
-                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/kidsZone")
+                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/kidsZone")
                         ? "text-blue-500"
                         : "text-gray-700"
-                    }`}
+                      }`}
                     selected={isElectricOpen || isMobileMenuOpen}
                     onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                   >
                     Kids Zone
                     <FaAngleDown
-                      className={`hidden h-3 w-3 transition-transform lg:block ${
-                        isElectricOpen ? "rotate-180" : ""
-                      }`}
+                      className={`hidden h-3 w-3 transition-transform lg:block ${isElectricOpen ? "rotate-180" : ""
+                        }`}
                     ></FaAngleDown>
                     <FaAngleDown
-                      className={`block h-3 w-3 transition-transform lg:hidden ${
-                        isMobileMenuOpen ? "rotate-180" : ""
-                      }`}
+                      className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                        }`}
                     ></FaAngleDown>
                   </ListItem>
                 </Typography>
@@ -196,40 +189,22 @@ const MainNavigation = () => {
               <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
                 <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
                   <EachMenuItem
-                    path={"/comming-soon"}
+                    path={"/kids-zone/powders"}
                     icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
+                    title={"Baby Powders"}
+                    description={"See all baby powders"}
                   ></EachMenuItem>
                   <EachMenuItem
-                    path={"/comming-soon"}
+                    path={"/kids-zone/cloths"}
                     icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
+                    title={"Baby Cloths"}
+                    description={"See all baby cloths"}
                   ></EachMenuItem>
                   <EachMenuItem
-                    path={"/comming-soon"}
+                    path={"/kids-zone/books"}
                     icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
+                    title={"Kids Books"}
+                    description={"See all Books"}
                   ></EachMenuItem>
                 </ul>
               </MenuList>
@@ -249,24 +224,21 @@ const MainNavigation = () => {
                 <Typography as="div" variant="pararaph" className="font-medium">
                   <ListItem
                     ripple={false}
-                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/beauty")
+                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/beauty")
                         ? "text-blue-500"
                         : "text-gray-700"
-                    }`}
+                      }`}
                     selected={isBeautyOpen || isMobileMenuOpen}
                     onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                   >
                     Beauty
                     <FaAngleDown
-                      className={`hidden h-3 w-3 transition-transform lg:block ${
-                        isBeautyOpen ? "rotate-180" : ""
-                      }`}
+                      className={`hidden h-3 w-3 transition-transform lg:block ${isBeautyOpen ? "rotate-180" : ""
+                        }`}
                     ></FaAngleDown>
                     <FaAngleDown
-                      className={`block h-3 w-3 transition-transform lg:hidden ${
-                        isMobileMenuOpen ? "rotate-180" : ""
-                      }`}
+                      className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                        }`}
                     ></FaAngleDown>
                   </ListItem>
                 </Typography>
@@ -275,40 +247,22 @@ const MainNavigation = () => {
               <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
                 <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
                   <EachMenuItem
-                    path={"/comming-soon"}
+                    path={"/beauty/makeup"}
                     icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
+                    title={"Makeup"}
+                    description={"See all Makeup Product"}
                   ></EachMenuItem>
                   <EachMenuItem
-                    path={"/comming-soon"}
+                    path={"/beauty/skin-care"}
                     icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
+                    title={"Skin Care"}
+                    description={"See all Skin-care Product"}
                   ></EachMenuItem>
                   <EachMenuItem
-                    path={"/comming-soon"}
+                    path={"/beauty/foundation"}
                     icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
+                    title={"Foundation"}
+                    description={"See all Foundation Product"}
                   ></EachMenuItem>
                 </ul>
               </MenuList>
@@ -327,24 +281,21 @@ const MainNavigation = () => {
                 <Typography as="div" variant="pararaph" className="font-medium">
                   <ListItem
                     ripple={false}
-                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/sports")
+                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${location.pathname?.includes("/sports")
                         ? "text-blue-500"
                         : "text-gray-700"
-                    }`}
+                      }`}
                     selected={isSportsOpen || isMobileMenuOpen}
                     onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                   >
                     Sports
                     <FaAngleDown
-                      className={`hidden h-3 w-3 transition-transform lg:block ${
-                        isSportsOpen ? "rotate-180" : ""
-                      }`}
+                      className={`hidden h-3 w-3 transition-transform lg:block ${isSportsOpen ? "rotate-180" : ""
+                        }`}
                     ></FaAngleDown>
                     <FaAngleDown
-                      className={`block h-3 w-3 transition-transform lg:hidden ${
-                        isMobileMenuOpen ? "rotate-180" : ""
-                      }`}
+                      className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                        }`}
                     ></FaAngleDown>
                   </ListItem>
                 </Typography>
@@ -353,197 +304,17 @@ const MainNavigation = () => {
               <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
                 <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
                   <EachMenuItem
-                    path={"/comming-soon"}
+                    path={"/sports/cricket"}
                     icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
+                    title={"Cricket"}
+                    description={"See all Cricket Product"}
                   ></EachMenuItem>
                   <EachMenuItem
-                    path={"/comming-soon"}
+                    path={"/sports/football"}
                     icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
+                    title={"Footbal"}
+                    description={"See all Footbal Product"}
                   ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                </ul>
-              </MenuList>
-            </Menu>
-          </NavbarItem>
-          {/* {Navbar Item 4} */}
-          <NavbarItem>
-            <Menu
-              open={isFurnitureOpen}
-              handler={setIsFurnitureOpen}
-              offset={{ mainAxis: 20 }}
-              placement="bottom"
-              allowHover={true}
-            >
-              <MenuHandler>
-                <Typography as="div" variant="pararaph" className="font-medium">
-                  <ListItem
-                    ripple={false}
-                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/furniture")
-                        ? "text-blue-500"
-                        : "text-gray-700"
-                    }`}
-                    selected={isFurnitureOpen || isMobileMenuOpen}
-                    onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-                  >
-                    Furniture
-                    <FaAngleDown
-                      className={`hidden h-3 w-3 transition-transform lg:block ${
-                        isFurnitureOpen ? "rotate-180" : ""
-                      }`}
-                    ></FaAngleDown>
-                    <FaAngleDown
-                      className={`block h-3 w-3 transition-transform lg:hidden ${
-                        isMobileMenuOpen ? "rotate-180" : ""
-                      }`}
-                    ></FaAngleDown>
-                  </ListItem>
-                </Typography>
-              </MenuHandler>
-
-              <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
-                <ul className="grid grid-cols-3 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                </ul>
-              </MenuList>
-            </Menu>
-          </NavbarItem>
-          {/* {Navbar Item 4} */}
-          <NavbarItem>
-            <Menu
-              open={isFoodOpen}
-              handler={setIsFoodOpen}
-              offset={{ mainAxis: 20 }}
-              placement="bottom"
-              allowHover={true}
-            >
-              <MenuHandler>
-                <Typography as="div" variant="pararaph" className="font-medium">
-                  <ListItem
-                    ripple={false}
-                    className={`flex items-center text-sm xl:text-base gap-1 py-2 pr-4 font-medium !bg-transparent  ${
-                      location.pathname?.includes("/food")
-                        ? "text-blue-500"
-                        : "text-gray-700"
-                    }`}
-                    selected={isFoodOpen || isMobileMenuOpen}
-                    onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-                  >
-                    Food Item
-                    <FaAngleDown
-                      className={`hidden h-3 w-3 transition-transform lg:block ${
-                        isFoodOpen ? "rotate-180" : ""
-                      }`}
-                    ></FaAngleDown>
-                    <FaAngleDown
-                      className={`block h-3 w-3 transition-transform lg:hidden ${
-                        isMobileMenuOpen ? "rotate-180" : ""
-                      }`}
-                    ></FaAngleDown>
-                  </ListItem>
-                </Typography>
-              </MenuHandler>
-
-              <MenuList className="max-w-screen-xl !shadow-lg mx-5 !p-5 !shadow-gray-400 !bg-[#ffffff] rounded-xl lg:block">
-                <ul className="grid grid-cols-2 gap-y-4 !bg-[#ffffff] gap-3 outline-none outline-0">
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  {/* <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem>
-                  <EachMenuItem
-                    path={"/comming-soon"}
-                    icon={category1}
-                    title={"Electronic"}
-                    description={"See all Electronic Product"}
-                  ></EachMenuItem> */}
                 </ul>
               </MenuList>
             </Menu>

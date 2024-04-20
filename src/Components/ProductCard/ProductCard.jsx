@@ -14,7 +14,7 @@ import useUser from "../../Hooks/useUser";
 const ProductCard = ({ product, apiPath, width }) => {
   const { user } = useContext(AuthContext);
   const [userData, isUserDataLoading] = useUser();
-  console.log(product);
+  // console.log(product);
   const {
     _id,
     images,
@@ -51,7 +51,7 @@ const ProductCard = ({ product, apiPath, width }) => {
       qunatity: 1,
     };
     axios
-      .post("https://cholo-bazar.vercel.app/cart", cartProduct)
+      .post("http://localhost:8000/cart", cartProduct)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
@@ -73,7 +73,7 @@ const ProductCard = ({ product, apiPath, width }) => {
     >
       <Link
         className="absolute top-0 bottom-0 left-0 right-0 z-10"
-        to={`http://localhost:5173/details/products/${_id}`}
+        to={`/details/${apiPath}/${_id}`}
       ></Link>
       <article className=" flex flex-col h-full items-center justify-between  ">
         <div className="card__img w-[120%] h-auto p-6 transition-all duration-500 delay-75">

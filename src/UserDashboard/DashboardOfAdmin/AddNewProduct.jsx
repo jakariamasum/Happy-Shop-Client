@@ -25,27 +25,6 @@ const AddNewProduct = () => {
     const brand_description = data.brand_description;
     const Country_Of_Origin = data.countryOfOrigin;
     const product_summery = data.product_summery;
-    // const specification_property_1 = data.specification_property_1;
-    // const specification_property_2 = data.specification_property_2;
-    // const specification_property_3 = data.specification_property_3;
-    // const specification_property_4 = data.specification_property_4;
-    // const specification_property_5 = data.specification_property_5;
-    // const specification_property_6 = data.specification_property_6;
-    // const specification_property_7 = data.specification_property_7;
-    // const specification_property_8 = data.specification_property_8;
-    // const specification_property_9 = data.specification_property_9;
-    // const specification_property_10 = data.specification_property_10;
-    // const specification_value_1 = data.specification_value_1;
-    // const specification_value_2 = data.specification_value_2;
-    // const specification_value_3 = data.specification_value_3;
-    // const specification_value_4 = data.specification_value_4;
-    // const specification_value_5 = data.specification_value_5;
-    // const specification_value_6 = data.specification_value_6;
-    // const specification_value_7 = data.specification_value_7;
-    // const specification_value_8 = data.specification_value_8;
-    // const specification_value_9 = data.specification_value_9;
-    // const specification_value_10 = data.specification_value_10;
-
     const specification = {
       title,
       summery: product_summery,
@@ -70,7 +49,7 @@ const AddNewProduct = () => {
 
     for (const image of images) {
       const formData = new FormData();
-      formData.append("key", "d3f91f97f4271f1b700b4304ebdb8133");
+      formData.append("key", "ee74842f81f029fb9561e589c2fe6b60");
       formData.append(`image`, image);
       try {
         const response = await axios.post(
@@ -104,7 +83,7 @@ const AddNewProduct = () => {
     };
 
     axios
-      .post("http://localhost:5173/products", product)
+      .post("http://localhost:8000/products", product)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
@@ -175,6 +154,7 @@ const AddNewProduct = () => {
               <SelectItem key={"kidsZone"}>Kids Zone</SelectItem>
               <SelectItem key={"personal-Care"}>Personal-Care</SelectItem>
               <SelectItem key={"daily-needs"}>Daily-needs</SelectItem>
+              <SelectItem key={"sports"}>Sports</SelectItem>
             </Select>
             <Select
               {...register("secondary_category", { required: true })}
@@ -188,6 +168,8 @@ const AddNewProduct = () => {
               <SelectItem key={"kidsZone"}>Kids Zone</SelectItem>
               <SelectItem key={"personal-Care"}>Personal-Care</SelectItem>
               <SelectItem key={"daily-needs"}>Daily-needs</SelectItem>
+              <SelectItem key={"cricket"}>Cricket</SelectItem>
+              <SelectItem key={"football"}>Football</SelectItem>
             </Select>
             <Input
               {...register("rating", { required: true })}

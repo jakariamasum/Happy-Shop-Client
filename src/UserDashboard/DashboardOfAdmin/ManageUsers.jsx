@@ -20,6 +20,7 @@ import img from "../../../public/user.png";
 import axios from "axios";
 import { FaArrowDown, FaPlus, FaSearch } from "react-icons/fa";
 import Loader from "../../Components/Loader/Loader";
+import Swal from "sweetalert2";
 
 const ManageUsers = () => {
   const [usersData, isUsersDataLoading, refetch] = useUsers();
@@ -27,18 +28,32 @@ const ManageUsers = () => {
     return <Loader></Loader>;
   }
   const handleRoleChange = (email, userRole, phoneNumber) => {
-    axios
-      .patch(
-        `http://localhost:5173/changeUserRole/?${
-          email ? `email=${email}` : `phoneNumber=${phoneNumber}`
-        }`,
-        { userRole }
-      )
-      .then((data) => {
-        if (data.data.modifiedCount > 0) {
-          refetch();
-        }
+    axios.patch(
+      `http://localhost:8000/changeUserRole/?${email ? `email=${email}` : `phoneNumber=${phoneNumber}`}`,
+      { userRole }
+    )
+    .then((data) => {
+      if (data.data.modifiedCount > 0) {
+        refetch();
+        // Display success message with SweetAlert2
+        Swal.fire({
+          icon: 'success',
+          title: 'Success!',
+          text: 'User role has been successfully changed.',
+          confirmButtonText: 'OK'
+        });
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      // Display error message with SweetAlert2 if request fails
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong! Please try again later.',
+        confirmButtonText: 'OK'
       });
+    });
   };
   console.log(usersData);
   return (

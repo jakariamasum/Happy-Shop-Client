@@ -9,7 +9,7 @@ const OrderProductDetails = () => {
   const { orderId } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:5173/singleOrder/${orderId}`)
+      .get(`http://localhost:8000/singleOrder/${orderId}`)
       .then((res) => {
         console.log(res);
         setData(res.data);

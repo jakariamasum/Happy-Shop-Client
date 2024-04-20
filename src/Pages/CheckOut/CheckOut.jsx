@@ -32,7 +32,7 @@ const CheckOut = () => {
       products: selectedCartProducts,
     };
     axios
-      .post("http://localhost:5173/order", order)
+      .post("http://localhost:8000/order", order)
       .then((res) => {
         console.log(res.data);
         if (res.data.url) {

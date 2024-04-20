@@ -1,6 +1,6 @@
 import { ButtonGroup, Input, Typography } from "@material-tailwind/react";
 import { FaFacebook, FaInstagram, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
-import CholoBazar from '../../../public/rokomari_logo.png'
+import HappyShop from '../../../public/rokomari_logo.png'
  
 const SITEMAP = [
   {
@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="mx-auto grid justify-between w-full grid-cols-1 gap-6 md:gap-8 lg:gap-32 py-12 md:grid-cols-2 lg:grid-cols-4">
             <div>
                 <Typography variant="h5" className="mb-8">
-            <img className="w-44 rounded-3xl" src={CholoBazar} alt="" />
+            <img className="w-44 rounded-3xl" src={HappyShop} alt="" />
           </Typography>
           <Typography variant="h6" className="mb-3">
                 Subscribe us

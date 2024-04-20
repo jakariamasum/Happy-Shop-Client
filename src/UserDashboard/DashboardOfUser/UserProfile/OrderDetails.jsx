@@ -8,7 +8,7 @@ const OrderDetails = () => {
     const [data, setData] = useState([])
     const {orderId} = useParams();
     useEffect( () => {
-        axios.get(`http://localhost:5173/singleOrder/${orderId}`)
+        axios.get(`http://localhost:8000/singleOrder/${orderId}`)
       .then(res => {
         console.log(res);
         setData(res.data)
@@ -29,7 +29,6 @@ const OrderDetails = () => {
                 </div>
                 <div>
              <h2 className="font-semibold text-sm  mb-2 text-gray-800">Number: <span className="font-bold">{data?.order?.phoneNumber || "Unknown"}</span></h2>
-              <h2 className="font-semibold text-sm  mb-2 text-gray-800">Total Quantity: <span className="font-bold">{data?.order?.phoneNumber || "Unknown"}</span></h2>
               <h2 className="font-semibold text-sm  mb-2 text-gray-800">Total Price: {data.order?.products
                   ?.reduce(
                     (total, product) =>

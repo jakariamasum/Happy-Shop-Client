@@ -23,7 +23,7 @@ const CartProductCard = ({ product }) => {
     if (product) {
       axios
         .patch(
-          `http://localhost:5173/updateCartProduct/${product._id}?isSelected=${isSelected}&quantity=${quantity}`
+          `http://localhost:8000/updateCartProduct/${product._id}?isSelected=${isSelected}&quantity=${quantity}`
         )
         .then((res) => {
           console.log(res);
@@ -38,7 +38,7 @@ const CartProductCard = ({ product }) => {
   const handleDeleteProductFromCart = () => {
     if (product) {
       axios
-        .delete(`http://localhost:5173/cart/${product._id}`)
+        .delete(`http://localhost:8000/cart/${product._id}`)
         .then((res) => {
           if (res.data.deletedCount) {
             refetch();

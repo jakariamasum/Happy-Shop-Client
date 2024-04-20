@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const axiosSecure = axios.create({
-  baseURL: "http://localhost:5173/", // Replace with your base URL http://localhost:5173
+  baseURL: "http://localhost:8000", // Replace with your base URL http://localhost:5173
 });
 const useAxiosSecure = () => {
   const navigate = useNavigate();

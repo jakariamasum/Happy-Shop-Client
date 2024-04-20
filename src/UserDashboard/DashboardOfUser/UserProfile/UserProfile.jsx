@@ -32,7 +32,7 @@ const UserProfile = () => {
       date_of_birth: data?.date_of_birth,
       gender: data?.gender || gender,
     };
-    fetch(`http://localhost:5173/updateUser/${_id}`, {
+    fetch(`http://localhost:8000/updateUser/${_id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

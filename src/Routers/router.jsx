@@ -28,6 +28,14 @@ import SignUp from "../Shared/SignUp/SignUp";
 import CategoryWiseProduct from "../Components/CategoryWiseProduct/CategoryWiseProduct";
 import SearchItems from "../Pages/SearchItems/SearchItems";
 import AllElectronics from "../Pages/Electronics/AllElectronics/AllElectronics";
+import Powder from "../Pages/Power/Powder";
+import Cloths from "../Pages/BabyCloths/Cloths";
+import KidsBook from "../Pages/KidsBooks/KidsBooks";
+import Makeup from "../Pages/Beauty/MakeUp";
+import SkinCare from "../Pages/Beauty/SkinCare";
+import Foundation from "../Pages/Beauty/Foundation";
+import Football from "../Pages/Sports/Football";
+import Cricket from "../Pages/Sports/Cricket";
 
 const router = createBrowserRouter([
   {
@@ -47,7 +55,7 @@ const router = createBrowserRouter([
         element: <SignUp></SignUp>,
       },
       {
-        path: "/details/:apiPath/:id",
+        path: "/details/products/:id",
         element: <Details></Details>,
       },
       {
@@ -117,6 +125,38 @@ const router = createBrowserRouter([
       {
         path: "/products-details/:orderId",
         element: <OrderDetails></OrderDetails>,
+      },
+      {
+        path: "/kids-zone/powders",
+        element: <Powder/>
+      },
+      {
+        path: "/kids-zone/cloths",
+        element: <Cloths/>
+      },
+      {
+        path: "/kids-zone/books",
+        element: <KidsBook/>
+      },
+      {
+        path: "/beauty/makeup",
+        element: <Makeup/>
+      },
+      {
+        path: "/beauty/skin-care",
+        element: <SkinCare/>
+      },
+      {
+        path: "/beauty/foundation",
+        element: <Foundation/>
+      },
+      {
+        path: "/sports/football",
+        element: <Football/>
+      },
+      {
+        path: "/sports/cricket",
+        element: <Cricket/>
       },
       {
         path: "/comming-soon",

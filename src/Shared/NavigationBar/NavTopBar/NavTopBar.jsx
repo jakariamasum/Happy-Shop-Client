@@ -83,7 +83,7 @@ const NavTopBar = () => {
             <img
               className="w-20 !h-full md:w-36"
               src={rokomari_logo}
-              alt="Logo of CholoBazar.com"
+              alt="Logo of HappyShop.com"
             />
           </Link>
         </NavbarBrand>
@@ -179,7 +179,7 @@ const NavTopBar = () => {
                           My Account
                         </Link>
                       </DropdownItem>
-                      {}
+                      { }
                       <DropdownItem key="order">
                         <Link
                           className="block text-base font-normal hover:text-blue-600 py-[5px]"
@@ -188,91 +188,18 @@ const NavTopBar = () => {
                           My Orders
                         </Link>
                       </DropdownItem>
-                      <DropdownItem key="free-book">
-                        <Link
-                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                          to={"/comming-soon"}
-                        >
-                          Download Free Book
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem key="ebook">
-                        <Link
-                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                          to={"/comming-soon"}
-                        >
-                          My eBook Library
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem key="list">
-                        <Link
-                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                          to={"/comming-soon"}
-                        >
-                          My List
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem key="book-self">
-                        <Link
-                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                          to={"/comming-soon"}
-                        >
-                          My Book Shelf
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem key="wishlist">
-                        <Link
-                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                          to={"/comming-soon"}
-                        >
-                          My Wishlist
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem key="rating-review">
-                        <Link
-                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                          to={"/comming-soon"}
-                        >
-                          My Rating Reviews
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem key="points">
-                        <Link
-                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                          to={"/comming-soon"}
-                        >
-                          My Points
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem key="followed-authors">
-                        <Link
-                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                          to={"/comming-soon"}
-                        >
-                          My Following Authors
-                        </Link>
-                      </DropdownItem>
-                      <DropdownItem showDivider={true} key="bkash-account">
-                        <Link
-                          className="block text-base font-normal hover:text-blue-600 py-[5px]"
-                          to={"/comming-soon"}
-                        >
-                          My Bkash Account
-                        </Link>
-                      </DropdownItem>
                       <DropdownItem key="signOut" onClick={logout}>
-                        <span className="block text-base font-normal hover:text-blue-600 py-2">
+                        <Link to='/' className="block text-base font-normal hover:text-blue-600 py-2">
                           Sign Out
-                        </span>
+                        </Link>
                       </DropdownItem>
                     </DropdownMenu>
                   )}
                 </Dropdown>
               </div>
               <img
-                className={` lg:hidden ${
-                  user.photoURL ? "rounded-full w-7 h-7" : "w-6 h-6"
-                }`}
+                className={` lg:hidden ${user.photoURL ? "rounded-full w-7 h-7" : "w-6 h-6"
+                  }`}
                 onClick={openDrawerRight}
                 src={user.photoURL || userIcon}
                 alt=""
@@ -311,9 +238,8 @@ const NavTopBar = () => {
               open={openAccordian === 3}
               icon={
                 <FaAngleDown
-                  className={`mx-auto h-4 w-4 transition-transform ${
-                    openAccordian === 3 ? "rotate-180" : ""
-                  }`}
+                  className={`mx-auto h-4 w-4 transition-transform ${openAccordian === 3 ? "rotate-180" : ""
+                    }`}
                 />
               }
             >
@@ -409,9 +335,8 @@ const NavTopBar = () => {
               open={openAccordian === 4}
               icon={
                 <FaCalculator
-                  className={`mx-auto h-4 w-4 transition-transform ${
-                    openAccordian === 4 ? "rotate-180" : ""
-                  }`}
+                  className={`mx-auto h-4 w-4 transition-transform ${openAccordian === 4 ? "rotate-180" : ""
+                    }`}
                 />
               }
             >
@@ -453,9 +378,8 @@ const NavTopBar = () => {
               open={openAccordian === 5}
               icon={
                 <FaCalculator
-                  className={`mx-auto h-4 w-4 transition-transform ${
-                    openAccordian === 5 ? "rotate-180" : ""
-                  }`}
+                  className={`mx-auto h-4 w-4 transition-transform ${openAccordian === 5 ? "rotate-180" : ""
+                    }`}
                 />
               }
             >
@@ -497,9 +421,8 @@ const NavTopBar = () => {
               open={openAccordian === 6}
               icon={
                 <FaCalculator
-                  className={`mx-auto h-4 w-4 transition-transform ${
-                    openAccordian === 6 ? "rotate-180" : ""
-                  }`}
+                  className={`mx-auto h-4 w-4 transition-transform ${openAccordian === 6 ? "rotate-180" : ""
+                    }`}
                 />
               }
             >
@@ -541,9 +464,8 @@ const NavTopBar = () => {
               open={openAccordian === 6}
               icon={
                 <FaCalculator
-                  className={`mx-auto h-4 w-4 transition-transform ${
-                    openAccordian === 6 ? "rotate-180" : ""
-                  }`}
+                  className={`mx-auto h-4 w-4 transition-transform ${openAccordian === 6 ? "rotate-180" : ""
+                    }`}
                 />
               }
             >
@@ -585,9 +507,8 @@ const NavTopBar = () => {
               open={openAccordian === 6}
               icon={
                 <FaCalculator
-                  className={`mx-auto h-4 w-4 transition-transform ${
-                    openAccordian === 6 ? "rotate-180" : ""
-                  }`}
+                  className={`mx-auto h-4 w-4 transition-transform ${openAccordian === 6 ? "rotate-180" : ""
+                    }`}
                 />
               }
             >
@@ -629,9 +550,8 @@ const NavTopBar = () => {
               open={openAccordian === 6}
               icon={
                 <FaCalculator
-                  className={`mx-auto h-4 w-4 transition-transform ${
-                    openAccordian === 6 ? "rotate-180" : ""
-                  }`}
+                  className={`mx-auto h-4 w-4 transition-transform ${openAccordian === 6 ? "rotate-180" : ""
+                    }`}
                 />
               }
             >
@@ -673,9 +593,8 @@ const NavTopBar = () => {
               open={openAccordian === 6}
               icon={
                 <FaCalculator
-                  className={`mx-auto h-4 w-4 transition-transform ${
-                    openAccordian === 6 ? "rotate-180" : ""
-                  }`}
+                  className={`mx-auto h-4 w-4 transition-transform ${openAccordian === 6 ? "rotate-180" : ""
+                    }`}
                 />
               }
             >
@@ -726,7 +645,7 @@ const NavTopBar = () => {
         <div className="mb-2 bg-[#0397d3] text-white py-[10px] px-3 flex items-center justify-between gap-1">
           <div className="flex items-center gap-1">
             <FaHome className="w-5 h-4"></FaHome>
-            <p className="text-xl">Hasnat Hasan</p>
+            <p className="text-xl">Admin admin</p>
           </div>
           <RxCross2 onClick={closeDrawerRight} className="w-6 h-6"></RxCross2>
         </div>
@@ -754,69 +673,6 @@ const NavTopBar = () => {
                 to={"/myOrders"}
               >
                 My Orders
-              </Link>
-              <Link
-                onClick={closeDrawerRight}
-                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-                to={"/downloadFreeBook"}
-              >
-                Download Free Book
-              </Link>
-              <Link
-                onClick={closeDrawerRight}
-                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-                to={"/myEbook"}
-              >
-                My eBook Library
-              </Link>
-              <Link
-                onClick={closeDrawerRight}
-                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-                to={"/myList"}
-              >
-                My List
-              </Link>
-              <Link
-                onClick={closeDrawerRight}
-                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-                to={"/bookShelf"}
-              >
-                My Book Shelf
-              </Link>
-              <Link
-                onClick={closeDrawerRight}
-                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-                to={"/myWishlish"}
-              >
-                My Wishlist
-              </Link>
-              <Link
-                onClick={closeDrawerRight}
-                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-                to={"/myRatingReviews"}
-              >
-                My Rating Reviews
-              </Link>
-              <Link
-                onClick={closeDrawerRight}
-                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-                to={"/myPoints"}
-              >
-                My Points
-              </Link>
-              <Link
-                onClick={closeDrawerRight}
-                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-                to={"/myFollowedAuthors"}
-              >
-                My Following Authors
-              </Link>
-              <Link
-                onClick={closeDrawerRight}
-                className="block text-lg px-2 font-normal hover:text-blue-600 py-3"
-                to={"/myBkashAccount"}
-              >
-                My Bkash Account
               </Link>
             </>
           )}

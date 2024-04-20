@@ -57,28 +57,6 @@ const Cart = () => {
             Total Price:{" "}
             <span className="font-semibold">{totalPrice.toFixed(2)} Tk</span>
           </h2>
-          <label className="block font-semibold mt-5" htmlFor="coupon">
-            Apply Coupon Code:
-          </label>
-          <div className="!mb-8 h-11 flex justify-center">
-            <input
-              id="coupon"
-              name="coupon"
-              className="p-[15px]  bg-[#fcfcfc] focus:outline-none border border-gray-300"
-              type="text"
-              defaultValue={"Rx1005"}
-              placeholder="use 'Dev-Hasnat' to get 10% discount"
-            />
-            <Button
-              className="basis-1/2 h-full hover:!text-white"
-              size="lg"
-              color="primary"
-              radius="none"
-              variant="solid"
-            >
-              Apply
-            </Button>
-          </div>
           <div className="flex items-center gap-4">
             <Button
               className="basis-1/2 hover:!text-white"

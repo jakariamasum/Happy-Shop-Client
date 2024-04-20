@@ -81,21 +81,18 @@ const Overview = () => {
             <img className="w-10 md:w-12 xl:w-16" src={cubes} alt="" />
             <div>
             <h2 className="text-white font-bold xl:text-xl">Total Products - {products?.length}</h2>
-            <h2 className="text-white font-bold xl:text-lg">Hasnat Hasan</h2>
             </div>
            </div>
            <div className="w-full p-3 md:p-4 xl:p-8 rounded-xl shadow-sm flex justify-start items-center gap-4  bg-[#02e296]">
             <img className="w-10 md:w-12 xl:w-16" src={packages} alt="" />
             <div>
             <h2 className="text-white font-bold xl:text-xl">Total Orders - {products?.length}</h2>
-            <h2 className="text-white font-bold xl:text-lg">Hasnat Hasan</h2>
             </div>
            </div>
            <div className="w-full col-span-2 shadow-sm lg:col-span-1 p-3 md:p-4 xl:p-8 flex justify-center items-center gap-4 rounded-xl bg-[#ff4560]">
             <img className="w-10 md:w-12 xl:w-16" src={team} alt="" />
             <div>
             <h2 className="text-white font-bold xl:text-xl">Total Users {usersData?.length}</h2>
-            <h2 className="text-white font-bold xl:text-lg">Hasnat Hasan</h2>
             </div>
            </div>
            </div>

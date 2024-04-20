@@ -42,7 +42,7 @@ const Home = () => {
           <SecondaryProductContainer
             data={hotDeals}
             apiPath={"products"}
-            headding={"Deals on CholoBazar Products 🔥🔥"}
+            headding={"Deals on HappyShop Products 🔥🔥"}
           ></SecondaryProductContainer>
           <ProductContainer
           width={290}

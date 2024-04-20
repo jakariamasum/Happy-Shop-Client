@@ -14,6 +14,7 @@ const SecondaryProductCard = ({ product, apiPath }) => {
   const { user } = useContext(AuthContext);
   const [userData, isUserDataLoading] = useUser();
   const [hover, setHover] = useState(false);
+  console.log(product)
   const {
     _id,
     images,
@@ -51,7 +52,7 @@ const SecondaryProductCard = ({ product, apiPath }) => {
       qunatity: 1,
     };
     axios
-      .post("https://cholo-bazar.vercel.app/cart", cartProduct)
+      .post("http://localhost:8000/cart", cartProduct)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
@@ -136,7 +137,7 @@ const SecondaryProductCard = ({ product, apiPath }) => {
           >
             <Link
               className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center"
-              to={`/details/${apiPath}/${_id}`}
+              to={`details/${apiPath}/${_id}`}
             >
               <FaEye></FaEye>
             </Link>

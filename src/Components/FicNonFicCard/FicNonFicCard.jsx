@@ -43,7 +43,7 @@ const FicNonFicCard = ({ header, books, tags, apiPath }) => {
           </div>
           <TabPanel className=" max-h-[267px] overflow-y-auto">
             {books.map((book) => (
-              <Link key={book._id} to={`/books/${book._id}`}>
+              <Link key={book._id} to={'#'}>
                 <div className="flex gap-2 h-20 items-center border-b py-[44px] border-b-gray-200 mx-6">
                   <h1 className="text-2xl text-[#e68a00]">
                     {books.indexOf(book) + 1} .

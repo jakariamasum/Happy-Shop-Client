@@ -19,7 +19,7 @@ const DetailsForBooks = ({book, apiPath}) => {
     const { _id, image, title, tags, price, reviews, rating, number_of_pages, number_of_reviews, number_of_ratings, main_category, language, publisher, category, stock, buyers, country, edition, author, isbn, book_summary, translator} = book;
     const handleAddToCart = () => {
       const cartProduct = { addedBy: user?.email || user?.phoneNumber, image, price, rating, reviews, number_of_ratings, number_of_reviews, author, tags, quantity: 1, isSelected: false, main_category, mainId: _id, qunatity: 1};
-      axios.post('http://localhost:5173/cart', cartProduct)
+      axios.post('http://localhost:8000/cart', cartProduct)
       .then(res => {
         if(res.data.insertedId){
           Swal.fire({
